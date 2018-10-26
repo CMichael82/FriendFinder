@@ -9,15 +9,23 @@ module.exports = function (app) {
 		friends.push(req.body);
 		res.json(true);
 		var currentScores = req.body.scores;
-		var difference;
-		console.log(currentScores);
 		for (var i = 0; i < friends.length; i++) {
-			
-			console.log(friends[i].scores);
-			// for (var j = 0; j<friends[i].scores.length; j++){
-			// 	console.log(friends.scores[j]);
-			// }
-			
+			var totalDifference = 0;
+			for (var j = 0; j < currentScores.length; j++) {
+				totalDifference += Math.abs(currentScores[j] - friends[i].scores[j]);
+				friends[i].difference = totalDifference;
+			}
+		}
+		var byDiff = friends.slice(0);
+		byDiff.sort(function (a, b) {
+			return a.difference - b.difference;
+		});
+		console.log('by Difference:');
+		console.log(byDiff);
+		if (byDiff[0].name !== req.body.name) {
+			console.log(byDiff[0]);
+		} else {
+			console.log(byDiff[1]);
 		}
 	});
 };
