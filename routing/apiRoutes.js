@@ -7,7 +7,6 @@ module.exports = function (app) {
 
 	app.post("/api/friends", function (req, res) {
 		friends.push(req.body);
-		res.json(true);
 		var currentScores = req.body.scores;
 		for (var i = 0; i < friends.length; i++) {
 			var totalDifference = 0;
@@ -24,8 +23,10 @@ module.exports = function (app) {
 		console.log(byDiff);
 		if (byDiff[0].name !== req.body.name) {
 			console.log(byDiff[0]);
+			res.json(byDiff[0]);
 		} else {
 			console.log(byDiff[1]);
+			res.json(byDiff[1]);
 		}
 	});
 };
