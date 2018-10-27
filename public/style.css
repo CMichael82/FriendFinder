@@ -1,16 +1,34 @@
-@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Overlock');
+@import url('https://fonts.googleapis.com/css?family=Cinzel:900|Niramit');
 
 body {
-font-family: 'Overlock', cursive;
-font-size: 24px;
+	font-family: 'Niramit', sans-serif;
+	font-size: 24px;
+}
+
+a {
+	font-size: 16px;
+	color: #6F9BC8;
 }
 
 h1 {
-	font-family: 'Bungee Inline', cursive;
-	color: teal;
+	color: #F4F4F4;
+	font-family: 'Cinzel', serif;
+	text-shadow: 3px 3px #3A6897;
 }
 
-select, option {
+label,select, option {
 	font-size: 16px;
 }
 
+select{
+	width: 300px;
+}
+
+.jumbotron{
+	background-color: #B9CEE4;
+	margin-top: 50px;
+}
+
+.submit {
+	background-color: #3A6897;
+}
