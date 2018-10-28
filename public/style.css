@@ -20,15 +20,21 @@ label,select, option {
 	font-size: 16px;
 }
 
-select{
-	width: 300px;
-}
-
 .jumbotron{
 	background-color: #B9CEE4;
 	margin-top: 50px;
 }
 
+.survey {
+	background-color: #B9CEE4;
+}
+
+.card {
+	border: 2px solid #3A6897;
+	margin: 10px;
+
+}
 .submit {
 	background-color: #3A6897;
+	margin-top: 50px;
 }
